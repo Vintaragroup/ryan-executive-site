@@ -78,8 +78,8 @@ export default function WorkPage() {
                       {/* Project Name */}
                       <div className="lg:col-span-1 flex items-center">
                         <div className="flex items-start gap-4">
-                          <div className="w-2 h-2 rounded-full bg-copper mt-2 flex-shrink-0" />
-                          <div className="flex-grow">
+                          <div className="w-2 h-2 rounded-full bg-copper mt-2 shrink-0" />
+                          <div className="grow">
                             <Body className="text-near-black font-semibold group-hover:text-copper transition-colors">
                               {project.name}
                             </Body>
@@ -231,7 +231,7 @@ export default function WorkPage() {
               <div className="space-y-6">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <span className="text-copper text-lg leading-none flex-shrink-0">→</span>
+                    <span className="text-copper text-lg leading-none shrink-0">→</span>
                     <Body className="text-near-black">
                       [Placeholder_Challenge_{i}]
                     </Body>
@@ -267,8 +267,8 @@ export default function WorkPage() {
                 <div key={i} className="space-y-6">
                   {/* Node */}
                   <div className="flex gap-6 items-start">
-                    <div className="w-2.5 h-2.5 rounded-full bg-copper mt-2 flex-shrink-0" />
-                    <div className="flex-grow">
+                    <div className="w-2.5 h-2.5 rounded-full bg-copper mt-2 shrink-0" />
+                    <div className="grow">
                       <Meta className="text-copper block mb-2">
                         [System_Node_{i}_Label]
                       </Meta>
