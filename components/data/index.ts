@@ -1,6 +1,6 @@
 /**
  * Data & Information Components
- * Metadata blocks, tables, and data displays
+ * Metadata blocks, tables, metrics, and data displays
  */
 
 export {
@@ -9,3 +9,4 @@ export {
   MetadataRow,
   MetadataList,
 } from './MetadataBlock';
+export { MetricCard, MetricGrid } from './MetricCard';
