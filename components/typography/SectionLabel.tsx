@@ -135,7 +135,7 @@ export function SectionLabel({
 
   return (
     <div
-      className={className || `content-stretch flex gap-[12px] items-start overflow-clip relative ${alignClass}`}
+      className={className || `content-stretch flex gap-3 items-start overflow-clip relative ${alignClass}`}
       style={containerStyle}
       data-node-id="161:280"
       data-name="Labels/Section_Label"

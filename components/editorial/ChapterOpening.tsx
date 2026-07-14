@@ -126,7 +126,7 @@ export function ChapterOpening({
 
       {/* Chapter Title */}
       <h2
-        className="font-serif text-warm-white text-center break-words"
+        className="font-serif text-warm-white text-center wrap-break-word"
         style={{
           fontSize: 'clamp(48px, 8vw, 72px)',
           letterSpacing: '-1.5px',
@@ -143,7 +143,7 @@ export function ChapterOpening({
       {/* Chapter Subtitle (Optional) */}
       {subtitle && (
         <p
-          className="font-sans text-gray-secondary text-center break-words"
+          className="font-sans text-gray-secondary text-center wrap-break-word"
           style={{
             fontSize: '17px',
             lineHeight: 1.7,

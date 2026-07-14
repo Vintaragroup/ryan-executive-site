@@ -92,7 +92,7 @@ export function CaseStudyCard({
 }: CaseStudyCardProps) {
   const content = (
     <div
-      className={className || 'flex flex-col gap-4 w-full max-w-[440px]'}
+      className={className || 'flex flex-col gap-4 w-full max-w-110'}
       data-node-id="161:322"
       data-name="Editorial/Case_Study_Card"
     >
@@ -136,7 +136,7 @@ export function CaseStudyCard({
 
       {/* Title */}
       <h3
-        className="font-serif text-near-black break-words"
+        className="font-serif text-near-black wrap-break-word"
         style={{
           fontSize: '28px',
           letterSpacing: '-0.3px',
@@ -150,7 +150,7 @@ export function CaseStudyCard({
 
       {/* Description */}
       <p
-        className="font-sans text-gray-secondary break-words"
+        className="font-sans text-gray-secondary wrap-break-word"
         style={{
           fontSize: '15px',
           lineHeight: 1.6,

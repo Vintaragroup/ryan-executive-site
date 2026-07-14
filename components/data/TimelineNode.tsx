@@ -101,7 +101,7 @@ export function TimelineNode({
     >
       {/* Year/Date */}
       <div
-        className="font-mono text-copper text-xs tracking-wide flex-shrink-0"
+        className="font-mono text-copper text-xs tracking-wide shrink-0"
         style={{
           fontSize: '11px',
           letterSpacing: '2px',

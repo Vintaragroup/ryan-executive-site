@@ -149,7 +149,7 @@ export function ImagePlaceholder({
     >
       {/* Placeholder Text */}
       <p
-        className="font-mono text-gray-secondary text-xs tracking-wide flex-shrink-0 m-0"
+        className="font-mono text-gray-secondary text-xs tracking-wide shrink-0 m-0"
         style={{
           fontFamily: 'var(--font-mono, monospace)',
           fontSize: '12px',
