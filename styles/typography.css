@@ -1,0 +1,335 @@
+/* 
+  Typography System
+  Source: Figma Type Specimen Nodes (164:442, 164:478)
+  
+  Three typefaces create a deliberate hierarchy:
+  - Instrument Serif: Editorial gravity and emotional weight
+  - Inter: Information architecture with quiet precision
+  - IBM Plex Mono: Metadata, timestamps, and systemic labels
+*/
+
+/* ========================================
+   FONT FAMILIES
+   ======================================== */
+
+:root {
+  /* Serif — Editorial and Display */
+  --font-serif: 'Instrument Serif', 'Georgia', 'Times New Roman', serif;
+
+  /* Sans-Serif — Body and UI */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+
+  /* Monospace — Metadata and Code */
+  --font-mono: 'IBM Plex Mono', 'Monaco', 'Courier New', monospace;
+}
+
+/* ========================================
+   DISPLAY TYPOGRAPHY
+   Instrument Serif — Largest scale, maximum impact
+   ======================================== */
+
+.type-display-hero {
+  font-family: var(--font-serif);
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 1.1; /* 110% */
+  letter-spacing: -2px;
+  font-style: normal;
+}
+
+.type-display-title {
+  font-family: var(--font-serif);
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.1; /* 110% */
+  letter-spacing: -1.5px;
+  font-style: normal;
+}
+
+.type-display-subtitle {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2; /* 120% */
+  letter-spacing: -1px;
+  font-style: normal;
+}
+
+.type-display-italic {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.3; /* 130% */
+  letter-spacing: -0.5px;
+  font-style: italic;
+}
+
+/* ========================================
+   HEADING TYPOGRAPHY
+   Instrument Serif — Section and subsection headers
+   ======================================== */
+
+.type-heading-h1 {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2; /* 120% */
+  letter-spacing: -0.5px;
+  font-style: normal;
+}
+
+.type-heading-h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.3; /* 130% */
+  letter-spacing: -0.3px;
+  font-style: normal;
+}
+
+/* ========================================
+   BODY TYPOGRAPHY
+   Inter — Primary reading and narrative text
+   ======================================== */
+
+.type-body-large {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7; /* 170% */
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.type-body-regular {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7; /* 170% */
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.type-body-small {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6; /* 160% */
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+/* ========================================
+   UI TYPOGRAPHY
+   Inter — Navigation, buttons, labels
+   ======================================== */
+
+.type-nav-link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.type-button-primary {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4;
+  letter-spacing: 2px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   METADATA TYPOGRAPHY
+   IBM Plex Mono — Labels, captions, timestamps
+   ======================================== */
+
+.type-meta-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500; /* Medium */
+  line-height: 1.4; /* 140% */
+  letter-spacing: 3px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.type-meta-caption {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400; /* Regular */
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.5px;
+  font-style: normal;
+}
+
+.type-meta-small {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 300; /* Light */
+  line-height: 1.4; /* 140% */
+  letter-spacing: 1.5px;
+  font-style: normal;
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   Scale adjustments for mobile/tablet viewports
+   ======================================== */
+
+@media (max-width: 768px) {
+  .type-display-hero {
+    font-size: clamp(60px, 8vw, 120px);
+    letter-spacing: -1.5px;
+  }
+
+  .type-display-title {
+    font-size: clamp(44px, 6vw, 72px);
+    letter-spacing: -1px;
+  }
+
+  .type-display-subtitle {
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.75px;
+  }
+
+  .type-display-italic {
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.5px;
+  }
+
+  .type-heading-h1 {
+    font-size: clamp(32px, 4vw, 40px);
+    letter-spacing: -0.4px;
+  }
+
+  .type-heading-h2 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    letter-spacing: -0.25px;
+  }
+
+  .type-body-large {
+    font-size: 18px;
+  }
+
+  .type-body-regular {
+    font-size: 16px;
+  }
+
+  .type-body-small {
+    font-size: 14px;
+  }
+
+  .type-nav-link {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .type-button-primary {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .type-meta-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .type-meta-caption {
+    font-size: 11px;
+  }
+
+  .type-meta-small {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 390px) {
+  .type-display-hero {
+    font-size: clamp(48px, 10vw, 120px);
+    letter-spacing: -1px;
+  }
+
+  .type-display-title {
+    font-size: clamp(36px, 8vw, 72px);
+    letter-spacing: -0.75px;
+  }
+
+  .type-display-subtitle,
+  .type-display-italic {
+    font-size: clamp(28px, 6vw, 48px);
+    letter-spacing: -0.5px;
+  }
+
+  .type-heading-h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    letter-spacing: -0.3px;
+  }
+
+  .type-heading-h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    letter-spacing: -0.2px;
+  }
+
+  .type-body-large {
+    font-size: 17px;
+  }
+
+  .type-body-regular {
+    font-size: 15px;
+  }
+
+  .type-body-small {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   TYPOGRAPHY UTILITIES
+   ======================================== */
+
+/* Truncate text with ellipsis */
+.type-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Truncate to N lines */
+.type-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.type-line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* All caps with readable tracking */
+.type-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Small caps for metadata */
+.type-small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+/* Improve text rendering */
+.type-optimize {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
