@@ -13,3 +13,9 @@ export {
   PullQuoteBlock,
   PullQuoteSeries,
 } from './PullQuote';
+export { DividersLine, DividersLineGroup } from './DividersLine';
+export {
+  EditorialSilenceScene,
+  EditorialSilenceSceneWithText,
+  EditorialSilenceSceneWithImage,
+} from './EditorialSilenceScene';

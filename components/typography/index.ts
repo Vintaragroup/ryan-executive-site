@@ -17,6 +17,9 @@ export { NavLink, ButtonLabel, UIText } from './UI';
 // Metadata
 export { MetaLabel, MetaCaption, MetaSmall, Meta, Timestamp, Citation } from './Meta';
 
+// Labels
+export { SectionLabel, SectionLabelWithDescription } from './SectionLabel';
+
 /**
  * Typography System Reference
  *
