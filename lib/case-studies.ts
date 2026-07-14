@@ -582,8 +582,83 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
 
     nextProject: {
+      id: "datavault",
+      name: "Datavault",
+    },
+  },
+
+  datavault: {
+    id: "datavault",
+    slug: "datavault",
+    name: "Datavault",
+    year: 2023,
+    category: "Enterprise Technology",
+
+    opening: {
+      subtitle: "2023 · ENTERPRISE TECHNOLOGY",
+      title: "Datavault",
+      heroDescription: "Architecting go-to-market operational systems for an enterprise data platform launch",
+      heroImageUrl: "[VALIDATION REQUIRED — provide Datavault hero image URL]",
+    },
+
+    context: {
+      heading: "[VALIDATION REQUIRED — Context heading for Datavault]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Project context paragraph 1: enterprise platform launch challenge]",
+        "[VALIDATION REQUIRED — Project context paragraph 2: go-to-market operational scope]",
+        "[VALIDATION REQUIRED — Project context paragraph 3: technology deployment stakes]",
+      ],
+    },
+
+    metrics: [
+      { value: "[VALIDATION REQUIRED — Metric 1 value]", label: "[VALIDATION REQUIRED — Metric 1 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 2 value]", label: "[VALIDATION REQUIRED — Metric 2 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 3 value]", label: "[VALIDATION REQUIRED — Metric 3 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 4 value]", label: "[VALIDATION REQUIRED — Metric 4 label]" },
+    ],
+
+    challenge: {
+      heading: "[VALIDATION REQUIRED — Challenge heading for Datavault]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Challenge description: enterprise platform operational complexity]",
+      ],
+    },
+
+    system: {
+      heading: "[VALIDATION REQUIRED — System heading for Datavault]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — System description: go-to-market operational framework, deployment architecture, team coordination]",
+      ],
+    },
+
+    gallery: {
+      images: [
+        {
+          src: "[VALIDATION REQUIRED — Gallery image 1 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 1 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 1]",
+        },
+        {
+          src: "[VALIDATION REQUIRED — Gallery image 2 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 2 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 2]",
+        },
+        {
+          src: "[VALIDATION REQUIRED — Gallery image 3 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 3 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 3]",
+        },
+      ],
+    },
+
+    reflection: {
+      quote: "[VALIDATION REQUIRED — Reflective quote about enterprise operations]",
+      attribution: "[VALIDATION REQUIRED — Attribution]",
+    },
+
+    nextProject: {
       id: "additional-project",
-      name: "[Additional_Project_Name]",
+      name: "[VALIDATION REQUIRED — Next project name (Vintara Group pending Figma node)]",
     },
   },
 
