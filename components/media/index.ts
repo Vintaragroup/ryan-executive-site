@@ -4,3 +4,4 @@
  */
 
 export { GalleryImage, GalleryGrid } from './GalleryImage';
+export { ImagePlaceholder, ImagePlaceholderGrid } from './ImagePlaceholder';
