@@ -103,60 +103,62 @@ export const caseStudies: Record<string, CaseStudy> = {
       title: "FIFA World Cup",
       heroDescription:
         "Orchestrating operational infrastructure for the world's largest single-sport event across multiple host cities",
-      heroImageUrl: "/placeholder-case-study-fifa-hero.jpg",
+      heroImageUrl: "[VALIDATION REQUIRED — provide FIFA World Cup hero image URL]",
     },
 
     context: {
-      heading: "[Context Heading — what was the situation]",
+      heading: "[VALIDATION REQUIRED — Context heading for FIFA World Cup]",
       paragraphs: [
-        "[Project context — two to three paragraphs describing the operational challenge, the scale of the engagement, and the stakes involved. This should read like documentary narration, not a case study.]",
+        "[VALIDATION REQUIRED — Project context paragraph 1: operational challenge, scale, stakes]",
+        "[VALIDATION REQUIRED — Project context paragraph 2: continuation of narrative]",
+        "[VALIDATION REQUIRED — Project context paragraph 3: stakes and importance]",
       ],
     },
 
     metrics: [
-      { value: "[00+]", label: "[METRIC LABEL]" },
-      { value: "[00]", label: "[METRIC LABEL]" },
-      { value: "[00%]", label: "[METRIC LABEL]" },
-      { value: "[00+]", label: "[METRIC LABEL]" },
+      { value: "[VALIDATION REQUIRED — Metric 1 value]", label: "[VALIDATION REQUIRED — Metric 1 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 2 value]", label: "[VALIDATION REQUIRED — Metric 2 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 3 value]", label: "[VALIDATION REQUIRED — Metric 3 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 4 value]", label: "[VALIDATION REQUIRED — Metric 4 label]" },
     ],
 
     challenge: {
-      heading: "[What made this hard]",
+      heading: "[VALIDATION REQUIRED — Challenge heading for FIFA World Cup]",
       paragraphs: [
-        "[Detailed description of the operational complexity — the logistical puzzle, the coordination challenge, the scale problem. Written as narrative, not bullet points.]",
+        "[VALIDATION REQUIRED — Challenge description: logistical puzzle, coordination challenge, scale problem]",
       ],
     },
 
     system: {
-      heading: "[How the system was built]",
+      heading: "[VALIDATION REQUIRED — System heading for FIFA World Cup]",
       paragraphs: [
-        "[Description of the operational framework, team structure, vendor coordination, timeline management, and system architecture deployed for this project]",
+        "[VALIDATION REQUIRED — System description: operational framework, team structure, vendor coordination, timeline, architecture]",
       ],
     },
 
     gallery: {
       images: [
         {
-          src: "/placeholder-gallery-01.jpg",
-          alt: "[Gallery image 1 alt text]",
-          caption: "[Gallery caption 01]",
+          src: "[VALIDATION REQUIRED — Gallery image 1 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 1 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 1]",
         },
         {
-          src: "/placeholder-gallery-02.jpg",
-          alt: "[Gallery image 2 alt text]",
-          caption: "[Gallery caption 02]",
+          src: "[VALIDATION REQUIRED — Gallery image 2 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 2 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 2]",
         },
         {
-          src: "/placeholder-gallery-03.jpg",
-          alt: "[Gallery image 3 alt text]",
-          caption: "[Gallery caption 03]",
+          src: "[VALIDATION REQUIRED — Gallery image 3 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 3 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 3]",
         },
       ],
     },
 
     reflection: {
-      quote: "[Reflective quote — what this project revealed about operational leadership]",
-      attribution: "[Attribution]",
+      quote: "[VALIDATION REQUIRED — Reflective quote about operational leadership]",
+      attribution: "[VALIDATION REQUIRED — Attribution]",
     },
 
     nextProject: {
@@ -169,61 +171,70 @@ export const caseStudies: Record<string, CaseStudy> = {
     id: "golden-state-warriors",
     slug: "golden-state-warriors",
     name: "Golden State Warriors",
-    year: 2024,
-    category: "Sports Organization",
+    year: 2019,
+    category: "Professional Sports",
 
     opening: {
-      subtitle: "[Subtitle_Placeholder]",
+      subtitle: "2019 · PROFESSIONAL SPORTS",
       title: "Golden State Warriors",
-      heroDescription: "[Project tagline]",
-      heroImageUrl: "/placeholder-case-study-warriors-hero.jpg",
+      heroDescription:
+        "Building the operational backbone for a championship-caliber franchise's event and fan experience programs",
+      heroImageUrl: "[VALIDATION REQUIRED — provide Golden State Warriors hero image URL]",
     },
 
     context: {
-      heading: "[Context Heading]",
-      paragraphs: ["[Context paragraph 1]"],
+      heading: "[VALIDATION REQUIRED — Context heading for Golden State Warriors]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Project context paragraph 1: operational challenge for franchise]",
+        "[VALIDATION REQUIRED — Project context paragraph 2: scale and fan experience scope]",
+        "[VALIDATION REQUIRED — Project context paragraph 3: championship organization stakes]",
+      ],
     },
 
     metrics: [
-      { value: "[00+]", label: "[METRIC LABEL]" },
-      { value: "[00]", label: "[METRIC LABEL]" },
-      { value: "[00%]", label: "[METRIC LABEL]" },
-      { value: "[00+]", label: "[METRIC LABEL]" },
+      { value: "[VALIDATION REQUIRED — Metric 1 value]", label: "[VALIDATION REQUIRED — Metric 1 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 2 value]", label: "[VALIDATION REQUIRED — Metric 2 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 3 value]", label: "[VALIDATION REQUIRED — Metric 3 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 4 value]", label: "[VALIDATION REQUIRED — Metric 4 label]" },
     ],
 
     challenge: {
-      heading: "[Challenge Heading]",
-      paragraphs: ["[Challenge description]"],
+      heading: "[VALIDATION REQUIRED — Challenge heading for Warriors]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Challenge description: operational complexity of franchise management]",
+      ],
     },
 
     system: {
-      heading: "[System Heading]",
-      paragraphs: ["[System description]"],
+      heading: "[VALIDATION REQUIRED — System heading for Warriors]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — System description: franchise operational framework and fan experience architecture]",
+      ],
     },
 
     gallery: {
       images: [
         {
-          src: "/placeholder-gallery-01.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 1 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 1 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 1]",
         },
         {
-          src: "/placeholder-gallery-02.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 2 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 2 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 2]",
         },
         {
-          src: "/placeholder-gallery-03.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 3 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 3 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 3]",
         },
       ],
     },
 
     reflection: {
-      quote: "[Reflection quote]",
-      attribution: "[Attribution]",
+      quote: "[VALIDATION REQUIRED — Reflective quote about franchise operations]",
+      attribution: "[VALIDATION REQUIRED — Attribution]",
     },
 
     nextProject: {
@@ -236,61 +247,70 @@ export const caseStudies: Record<string, CaseStudy> = {
     id: "universal-studios",
     slug: "universal-studios",
     name: "Universal Studios",
-    year: 2023,
-    category: "Entertainment",
+    year: 2020,
+    category: "Entertainment & Hospitality",
 
     opening: {
-      subtitle: "[Subtitle_Placeholder]",
+      subtitle: "2020 · ENTERTAINMENT & HOSPITALITY",
       title: "Universal Studios",
-      heroDescription: "[Project tagline]",
-      heroImageUrl: "/placeholder-case-study-universal-hero.jpg",
+      heroDescription:
+        "Designing operational systems for immersive guest experiences at scale across theme park properties",
+      heroImageUrl: "[VALIDATION REQUIRED — provide Universal Studios hero image URL]",
     },
 
     context: {
-      heading: "[Context Heading]",
-      paragraphs: ["[Context paragraph 1]"],
+      heading: "[VALIDATION REQUIRED — Context heading for Universal Studios]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Project context paragraph 1: theme park operational challenge]",
+        "[VALIDATION REQUIRED — Project context paragraph 2: guest experience scale across properties]",
+        "[VALIDATION REQUIRED — Project context paragraph 3: immersion and operational stakes]",
+      ],
     },
 
     metrics: [
-      { value: "[00+]", label: "[METRIC LABEL]" },
-      { value: "[00]", label: "[METRIC LABEL]" },
-      { value: "[00%]", label: "[METRIC LABEL]" },
-      { value: "[00+]", label: "[METRIC LABEL]" },
+      { value: "[VALIDATION REQUIRED — Metric 1 value]", label: "[VALIDATION REQUIRED — Metric 1 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 2 value]", label: "[VALIDATION REQUIRED — Metric 2 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 3 value]", label: "[VALIDATION REQUIRED — Metric 3 label]" },
+      { value: "[VALIDATION REQUIRED — Metric 4 value]", label: "[VALIDATION REQUIRED — Metric 4 label]" },
     ],
 
     challenge: {
-      heading: "[Challenge Heading]",
-      paragraphs: ["[Challenge description]"],
+      heading: "[VALIDATION REQUIRED — Challenge heading for Universal Studios]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — Challenge description: immersive experience at scale across multiple properties]",
+      ],
     },
 
     system: {
-      heading: "[System Heading]",
-      paragraphs: ["[System description]"],
+      heading: "[VALIDATION REQUIRED — System heading for Universal Studios]",
+      paragraphs: [
+        "[VALIDATION REQUIRED — System description: guest experience framework, operational architecture, multi-property coordination]",
+      ],
     },
 
     gallery: {
       images: [
         {
-          src: "/placeholder-gallery-01.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 1 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 1 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 1]",
         },
         {
-          src: "/placeholder-gallery-02.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 2 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 2 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 2]",
         },
         {
-          src: "/placeholder-gallery-03.jpg",
-          alt: "[Gallery image alt]",
-          caption: "[Gallery caption]",
+          src: "[VALIDATION REQUIRED — Gallery image 3 URL]",
+          alt: "[VALIDATION REQUIRED — Gallery image 3 alt text]",
+          caption: "[VALIDATION REQUIRED — Gallery caption 3]",
         },
       ],
     },
 
     reflection: {
-      quote: "[Reflection quote]",
-      attribution: "[Attribution]",
+      quote: "[VALIDATION REQUIRED — Reflective quote about immersive experiences and operations]",
+      attribution: "[VALIDATION REQUIRED — Attribution]",
     },
 
     nextProject: {
