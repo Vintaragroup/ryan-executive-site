@@ -105,7 +105,7 @@ export function MetadataBlock({
 
       {/* Value */}
       <div
-        className="font-sans text-sm text-near-black break-words"
+        className="font-sans text-sm text-near-black wrap-break-word"
         style={{
           fontSize: '14px',
           color: 'var(--color-near-black, #1a1a1a)',
@@ -146,7 +146,7 @@ export function MetadataInline({
     >
       {/* Label */}
       <span
-        className="font-mono font-medium text-xs tracking-wide text-copper flex-shrink-0"
+        className="font-mono font-medium text-xs tracking-wide text-copper shrink-0"
         style={{
           fontSize: '10px',
           letterSpacing: '2px',

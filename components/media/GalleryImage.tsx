@@ -93,7 +93,7 @@ export function GalleryImage({
 }: GalleryImageProps) {
   return (
     <figure
-      className={className || 'flex flex-col gap-3 w-full max-w-[600px]'}
+      className={className || 'flex flex-col gap-3 w-full max-w-150'}
       data-node-id="161:330"
       data-name="Media/Gallery_Image"
     >
@@ -151,7 +151,7 @@ export function GalleryImage({
 
       {/* Caption */}
       <figcaption
-        className="font-mono text-gray-secondary text-xs tracking-tight w-full break-words"
+        className="font-mono text-gray-secondary text-xs tracking-tight w-full wrap-break-word"
         style={{
           fontSize: '11px',
           letterSpacing: '0.5px',

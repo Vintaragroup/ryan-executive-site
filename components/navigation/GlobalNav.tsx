@@ -58,7 +58,7 @@ export function GlobalNav({
       data-name="Navigation/Global_Nav"
     >
       {/* Brand/Logo */}
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <span
           className="font-sans font-semibold text-warm-white text-sm tracking-wider"
           style={{ letterSpacing: '3px', fontSize: '14px' }}
@@ -69,7 +69,7 @@ export function GlobalNav({
 
       {/* Navigation Links */}
       <ul
-        className="flex gap-12 items-center flex-shrink-0"
+        className="flex gap-12 items-center shrink-0"
         role="menubar"
         style={{ gap: '48px' }}
       >

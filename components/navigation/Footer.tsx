@@ -79,7 +79,7 @@ export function Footer({ copyrightText, links, className, onLinkClick }: FooterP
     >
       {/* Copyright (Left) */}
       <div
-        className="text-gray-secondary font-mono text-xs tracking-wide flex-shrink-0"
+        className="text-gray-secondary font-mono text-xs tracking-wide shrink-0"
         style={{
           fontSize: '10px',
           letterSpacing: '1.5px',
@@ -91,7 +91,7 @@ export function Footer({ copyrightText, links, className, onLinkClick }: FooterP
       </div>
 
       {/* Footer Links (Right) */}
-      <nav className="flex gap-8 items-center flex-shrink-0" role="navigation" aria-label="Footer links">
+      <nav className="flex gap-8 items-center shrink-0" role="navigation" aria-label="Footer links">
         {links.map((link, index) => (
           <a
             key={`${link.href}-${index}`}

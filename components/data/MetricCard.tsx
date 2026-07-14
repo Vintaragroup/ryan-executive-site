@@ -84,7 +84,7 @@ export function MetricCard({
     <div
       className={
         className ||
-        'flex flex-col gap-2 p-8 border border-light-gray w-full max-w-[280px] h-[140px] justify-start'
+        'flex flex-col gap-2 p-8 border border-light-gray w-full max-w-70 h-35 justify-start'
       }
       style={{
         borderColor: 'var(--color-light-gray, #e5e2da)',

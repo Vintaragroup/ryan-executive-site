@@ -89,7 +89,7 @@ export function PullQuote({
     <figure
       className={
         className ||
-        'flex flex-col gap-6 px-20 py-12 w-full max-w-[800px] mx-auto'
+        'flex flex-col gap-6 px-20 py-12 w-full max-w-content mx-auto'
       }
       data-node-id="161:292"
       data-name="Editorial/Pull_Quote"
@@ -97,7 +97,7 @@ export function PullQuote({
       {/* Opening Quote Mark (Optional) */}
       {showQuoteMark && (
         <div
-          className="text-copper text-left flex-shrink-0"
+          className="text-copper text-left shrink-0"
           style={{
             fontSize: 'clamp(48px, 8vw, 72px)',
             color: 'var(--color-copper, #a6825e)',
@@ -114,7 +114,7 @@ export function PullQuote({
 
       {/* Quote Text */}
       <blockquote
-        className="font-serif italic text-near-black text-center break-words m-0"
+        className="font-serif italic text-near-black text-center wrap-break-word m-0"
         style={{
           fontSize: 'clamp(20px, 4vw, 28px)',
           lineHeight: 1.5,
