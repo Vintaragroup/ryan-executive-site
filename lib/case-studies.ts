@@ -323,14 +323,14 @@ export const caseStudies: Record<string, CaseStudy> = {
     id: "special-olympics",
     slug: "special-olympics",
     name: "Special Olympics",
-    year: 2022,
-    category: "Global Sports Event",
+    year: 2018,
+    category: "Global Nonprofit",
 
     opening: {
-      subtitle: "[Subtitle_Placeholder]",
+      subtitle: "2018 · GLOBAL NONPROFIT",
       title: "Special Olympics",
-      heroDescription: "[Project tagline]",
-      heroImageUrl: "/placeholder-case-study-special-olympics-hero.jpg",
+      heroDescription: "Coordinating multi-national event logistics with volunteer-driven operational infrastructure",
+      heroImageUrl: "[VALIDATION REQUIRED — provide Special Olympics hero image URL]",
     },
 
     context: {
@@ -390,14 +390,14 @@ export const caseStudies: Record<string, CaseStudy> = {
     id: "amp-energy",
     slug: "amp-energy",
     name: "AMP Energy",
-    year: 2021,
-    category: "Brand Activation",
+    year: 2017,
+    category: "Consumer Brand",
 
     opening: {
-      subtitle: "[Subtitle_Placeholder]",
+      subtitle: "2017 · CONSUMER BRAND",
       title: "AMP Energy",
-      heroDescription: "[Project tagline]",
-      heroImageUrl: "/placeholder-case-study-amp-hero.jpg",
+      heroDescription: "Building experiential marketing operations bridging brand activations with live event production",
+      heroImageUrl: "[VALIDATION REQUIRED — provide AMP Energy hero image URL]",
     },
 
     context: {
@@ -448,8 +448,8 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
 
     nextProject: {
-      id: "caa",
-      name: "CAA",
+      id: "nike",
+      name: "Nike",
     },
   },
 
@@ -524,14 +524,14 @@ export const caseStudies: Record<string, CaseStudy> = {
     id: "nike",
     slug: "nike",
     name: "Nike",
-    year: 2019,
-    category: "Brand Campaign",
+    year: 2021,
+    category: "Global Brand",
 
     opening: {
-      subtitle: "[Subtitle_Placeholder]",
+      subtitle: "2021 · GLOBAL BRAND",
       title: "Nike",
-      heroDescription: "[Project tagline]",
-      heroImageUrl: "/placeholder-case-study-nike-hero.jpg",
+      heroDescription: "Executing premium brand experiences requiring military-grade operational precision at global scale",
+      heroImageUrl: "[VALIDATION REQUIRED — provide Nike hero image URL]",
     },
 
     context: {
