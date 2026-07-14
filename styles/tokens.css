@@ -1,0 +1,202 @@
+/* 
+  Design Tokens
+  Source: Figma Variables & Design Tokens Reference (164:398)
+  
+  Token organization:
+  - Primitive colors: Base color values
+  - Semantic colors: Purpose-driven color roles
+  - Spacing: 8px base unit scale
+  - Dimensions: Container and breakpoint widths
+  - Borders: Color roles and widths
+  - Radii: Border radius values
+  - Effects: Shadow and visual effects
+  - Opacity: Transparency levels
+  - Z-index: Stacking context
+  - Focus & Selection: Interactive states
+*/
+
+:root {
+  /* ========================================
+     PRIMITIVE COLORS
+     ======================================== */
+
+  /* Primary Colors - Architectural Foundation */
+  --color-near-black: #0f0f10;
+  --color-warm-white: #f5f2ed;
+  --color-paper: #faf8f5;
+
+  /* Accent Colors - Copper Metallics */
+  --color-copper: #a6825e;
+  --color-copper-light: #c8a882;
+
+  /* Neutral Colors - Gray Scale */
+  --color-charcoal: #1a1a1a;
+  --color-dark-gray: #2a2a2a;
+  --color-mid-gray: #6b6b6b;
+  --color-light-gray: #e5e2da;
+
+  /* ========================================
+     SEMANTIC COLORS
+     ======================================== */
+
+  /* Text Colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #8a8a8a;
+  --text-inverse: #f5f2ed;
+  --text-copper: #a6825e;
+
+  /* Surface Colors */
+  --surface-dark: #0f0f10;
+  --surface-charcoal: #1a1a1a;
+  --surface-light: #faf8f5;
+  --surface-paper: #f5f2ed;
+
+  /* Border Colors */
+  --border-copper: #a6825e;
+  --border-light: #e5e2da;
+  --border-dark: #2a2a2a;
+
+  /* ========================================
+     SPACING SCALE
+     8px base unit with architectural intervals
+     ======================================== */
+
+  /* Intimate: 4–16px (Component cohesion) */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+
+  /* Structural: 24–64px (Visual hierarchy) */
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+
+  /* Monumental: 96–256px (Compositional breathing) */
+  --space-3xl: 96px;
+  --space-4xl: 128px;
+  --space-5xl: 192px;
+  --space-6xl: 256px;
+
+  /* ========================================
+     BREAKPOINTS
+     ======================================== */
+
+  --bp-mobile: 390px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1440px;
+
+  /* ========================================
+     CONTAINERS
+     ======================================== */
+
+  --container-max: 1200px;
+  --container-content: 800px;
+  --container-narrow: 680px;
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+
+  --border-width-thin: 1px;
+  --border-width-base: 2px;
+  --border-width-thick: 4px;
+
+  /* ========================================
+     BORDER RADII
+     ======================================== */
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-base: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     OPACITY LEVELS
+     ======================================== */
+
+  --opacity-0: 0;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-100: 1;
+
+  /* ========================================
+     SHADOW / EFFECTS
+     ======================================== */
+
+  /* Subtle elevation */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  /* Base elevation */
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Medium elevation */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Large elevation */
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  /* Extra large elevation */
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+
+  /* ========================================
+     TRANSITIONS & ANIMATIONS
+     ======================================== */
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========================================
+     LINE HEIGHT
+     ======================================== */
+
+  --leading-tight: 1.1;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.6;
+  --leading-loose: 1.7;
+}
+
+/* ========================================
+   FOCUS & SELECTION STYLES
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--color-copper);
+  color: var(--color-warm-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-copper);
+  color: var(--color-warm-white);
+}
