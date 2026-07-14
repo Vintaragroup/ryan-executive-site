@@ -10,3 +10,4 @@ export {
   MetadataList,
 } from './MetadataBlock';
 export { MetricCard, MetricGrid } from './MetricCard';
+export { TimelineNode, Timeline } from './TimelineNode';
