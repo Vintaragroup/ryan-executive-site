@@ -1,0 +1,827 @@
+.scene {
+  position: relative;
+  width: 100%;
+  background-color: rgb(249, 247, 242);
+  color: rgb(26, 26, 26);
+}
+
+.desktopVariant,
+.tabletVariant,
+.mobileVariant {
+  position: relative;
+  width: 100%;
+  background-color: rgb(249, 247, 242);
+}
+
+.tabletVariant,
+.mobileVariant {
+  display: none;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.desktopIntroBlock,
+.tabletIntroBlock,
+.mobileIntroBlock {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.desktopIntroBlock {
+  padding: 120px 80px 0;
+}
+
+.desktopIntroContent {
+  display: flex;
+  width: 900px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.desktopChapterLabel,
+.tabletChapterLabel,
+.mobileChapterLabel,
+.desktopMetaLabel,
+.tabletMetaLabel,
+.mobileMetaLabel,
+.desktopMetricLabel,
+.tabletMetricLabel,
+.mobileMetricLabel,
+.desktopEditorialHeading,
+.tabletEditorialHeading,
+.mobileEditorialHeading,
+.desktopGovernanceNumber,
+.tabletGovernanceNumber,
+.mobileGovernanceNumber,
+.desktopGovernanceLabel,
+.tabletGovernanceLabel,
+.mobileGovernanceLabel,
+.desktopNoteHeading,
+.tabletNoteHeading,
+.mobileNoteHeading,
+.desktopNoteBody,
+.tabletNoteBody,
+.mobileNoteBody {
+  margin: 0;
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-style: normal;
+  line-height: normal;
+}
+
+.desktopHeading,
+.tabletHeading,
+.mobileHeading,
+.desktopMetricValue,
+.tabletMetricValue,
+.mobileMetricValue,
+.desktopQuote,
+.tabletQuote,
+.mobileQuote {
+  margin: 0;
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(26, 26, 26);
+}
+
+.desktopDescription,
+.tabletDescription,
+.mobileDescription,
+.desktopBody,
+.tabletBody,
+.mobileBody,
+.desktopMetaValue,
+.tabletMetaValue,
+.mobileMetaValue {
+  margin: 0;
+  font-family: var(--font-geist), 'Geist', sans-serif;
+  font-style: normal;
+  color: rgb(26, 26, 26);
+}
+
+.desktopChapterLabel,
+.tabletChapterLabel,
+.mobileChapterLabel,
+.desktopMetaLabel,
+.tabletMetaLabel,
+.mobileMetaLabel,
+.desktopMetricLabel,
+.tabletMetricLabel,
+.mobileMetricLabel,
+.desktopEditorialHeading,
+.tabletEditorialHeading,
+.mobileEditorialHeading,
+.desktopGovernanceNumber,
+.tabletGovernanceNumber,
+.mobileGovernanceNumber,
+.desktopNoteHeading,
+.tabletNoteHeading,
+.mobileNoteHeading {
+  color: rgb(166, 130, 94);
+  text-transform: uppercase;
+}
+
+.desktopChapterLabel {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.desktopHeading {
+  width: 900px;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.desktopDescription {
+  width: 900px;
+  font-size: 18px;
+  line-height: 27px;
+  opacity: 0.5;
+}
+
+.desktopHeroFrame,
+.tabletHeroFrame,
+.mobileHeroFrame,
+.desktopGalleryPrimary,
+.tabletGalleryPrimary,
+.mobileGalleryPrimary,
+.desktopGallerySecondaryImage,
+.tabletGallerySecondaryImage,
+.mobileGallerySecondaryImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.desktopHeroFrame {
+  width: 100%;
+  height: 800px;
+}
+
+.desktopFeatured {
+  display: flex;
+  width: 100%;
+  gap: 80px;
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+.desktopBodyColumn {
+  display: flex;
+  width: 733px;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.desktopBody {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.desktopMetaColumn,
+.tabletMetaColumn,
+.mobileMetaColumn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.desktopMetaColumn {
+  width: 405px;
+  gap: 32px;
+}
+
+.desktopMetaBlock,
+.tabletMetaBlock,
+.mobileMetaBlock {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(229, 226, 218);
+  box-sizing: border-box;
+}
+
+.desktopMetaLabel {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.desktopMetaValue {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.desktopMetricsRow,
+.tabletMetricsRow,
+.mobileMetricsRow {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.desktopMetricsRow {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  padding: 0 80px 120px;
+}
+
+.desktopMetricCard,
+.tabletMetricCard,
+.mobileMetricCard {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desktopMetricCard {
+  gap: 12px;
+}
+
+.desktopMetricValue {
+  font-size: 80px;
+  line-height: 1;
+}
+
+.desktopMetricLabel {
+  font-size: 10px;
+}
+
+.desktopEditorialBlock,
+.tabletEditorialBlock,
+.mobileEditorialBlock {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.desktopEditorialBlock {
+  gap: 80px;
+  padding: 120px;
+}
+
+.desktopEditorialHeading {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.desktopGovernanceTrack {
+  display: flex;
+  width: 1040px;
+  align-items: center;
+}
+
+.desktopGovernanceStep,
+.desktopGovernanceStepLast {
+  display: flex;
+  align-items: center;
+}
+
+.desktopGovernanceStep {
+  width: 220px;
+}
+
+.desktopGovernanceStepLast {
+  width: 160px;
+}
+
+.desktopGovernanceContent {
+  display: flex;
+  width: 160px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.desktopGovernanceCircle,
+.tabletGovernanceCircle,
+.mobileGovernanceCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(166, 130, 94);
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+.desktopGovernanceCircle {
+  width: 48px;
+  height: 48px;
+}
+
+.desktopGovernanceNumber {
+  font-size: 14px;
+}
+
+.desktopGovernanceLabel {
+  color: rgb(26, 26, 26);
+  font-size: 10px;
+  text-align: center;
+}
+
+.desktopGovernanceConnector {
+  width: 60px;
+  height: 1px;
+  background-color: rgb(166, 130, 94);
+  opacity: 0.3;
+}
+
+.desktopQuoteSection,
+.tabletQuoteSection,
+.mobileQuoteSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.desktopQuoteSection {
+  padding: 160px 80px 200px;
+}
+
+.desktopQuote {
+  width: 1061px;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.desktopGallerySection {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  padding: 0 80px 160px;
+  box-sizing: border-box;
+}
+
+.desktopGalleryPrimary {
+  width: 733px;
+  height: 560px;
+}
+
+.desktopNoteAnchor,
+.tabletNoteAnchor,
+.mobileNoteAnchor {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktopNoteAnchor {
+  left: 32px;
+  top: 374px;
+  width: 242px;
+  height: 78px;
+}
+
+.desktopNote,
+.tabletNote,
+.mobileNote {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+  background-color: rgb(245, 237, 216);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+.desktopNote {
+  width: 240px;
+  padding: 12px;
+  transform: rotate(-1.5deg);
+}
+
+.desktopNoteHeading,
+.desktopNoteBody {
+  font-size: 7px;
+  white-space: nowrap;
+}
+
+.desktopNoteBody,
+.tabletNoteBody,
+.mobileNoteBody {
+  color: rgb(26, 26, 26);
+  opacity: 0.6;
+}
+
+.desktopGallerySecondary {
+  display: flex;
+  width: 515px;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.desktopGallerySecondaryImage {
+  width: 515px;
+  height: 264px;
+}
+
+@media (max-width: 1023px) {
+  .desktopVariant {
+    display: none;
+  }
+
+  .tabletVariant {
+    display: block;
+  }
+
+  .tabletIntroBlock {
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 48px 40px;
+  }
+
+  .tabletChapterLabel {
+    font-size: 12px;
+  }
+
+  .tabletHeading {
+    width: 672px;
+    font-size: 56px;
+    line-height: 1.05;
+  }
+
+  .tabletDescription {
+    width: 672px;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.6;
+  }
+
+  .tabletHeroFrame {
+    width: 100%;
+    height: 500px;
+  }
+
+  .tabletFeatured {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 48px;
+    padding: 60px 48px;
+    box-sizing: border-box;
+  }
+
+  .tabletNarration {
+    display: flex;
+    width: 672px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .tabletBody {
+    width: 672px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .tabletMetaColumn {
+    width: 672px;
+    gap: 16px;
+  }
+
+  .tabletMetaLabel {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .tabletMetaValue {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .tabletMetricsRow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 48px;
+  }
+
+  .tabletMetricCard {
+    gap: 8px;
+  }
+
+  .tabletMetricValue {
+    font-size: 64px;
+    line-height: 1;
+  }
+
+  .tabletMetricLabel {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .tabletEditorialBlock {
+    gap: 48px;
+    padding: 80px 48px;
+  }
+
+  .tabletEditorialHeading {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .tabletGovernanceTrack {
+    display: flex;
+    width: 672px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tabletGovernanceStep,
+  .tabletGovernanceStepLast {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .tabletGovernanceContent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .tabletGovernanceCircle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .tabletGovernanceNumber {
+    font-size: 12px;
+  }
+
+  .tabletGovernanceLabel {
+    color: rgb(26, 26, 26);
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  .tabletGovernanceConnector {
+    width: 1px;
+    height: 24px;
+    background-color: rgb(166, 130, 94);
+    opacity: 0.3;
+  }
+
+  .tabletQuoteSection {
+    padding: 40px 48px 120px;
+  }
+
+  .tabletQuote {
+    width: 672px;
+    font-size: 48px;
+    line-height: 1.18;
+    text-align: center;
+  }
+
+  .tabletGallerySection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 48px 120px;
+    box-sizing: border-box;
+  }
+
+  .tabletGalleryPrimary {
+    width: 672px;
+    height: 420px;
+  }
+
+  .tabletNoteAnchor {
+    left: 24px;
+    bottom: 24px;
+  }
+
+  .tabletNote {
+    width: 220px;
+    padding: 10px 12px;
+    transform: rotate(-1.5deg);
+  }
+
+  .tabletNoteHeading,
+  .tabletNoteBody {
+    font-size: 7px;
+    white-space: nowrap;
+  }
+
+  .tabletGallerySecondary {
+    display: grid;
+    width: 672px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .tabletGallerySecondaryImage {
+    width: 324px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 479px) {
+  .tabletVariant {
+    display: none;
+  }
+
+  .mobileVariant {
+    display: block;
+  }
+
+  .mobileIntroBlock {
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 24px 32px;
+  }
+
+  .mobileChapterLabel {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .mobileHeading {
+    width: 100%;
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  .mobileDescription {
+    width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 0.6;
+  }
+
+  .mobileHeroFrame {
+    width: 100%;
+    height: 320px;
+  }
+
+  .mobileBodySection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px 24px;
+    box-sizing: border-box;
+  }
+
+  .mobileNarration {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobileBody {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .mobileMetaColumn {
+    gap: 16px;
+  }
+
+  .mobileMetaLabel {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .mobileMetaValue {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .mobileMetricsRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+    padding: 0 24px 80px;
+  }
+
+  .mobileMetricCard {
+    gap: 8px;
+  }
+
+  .mobileMetricValue {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .mobileMetricLabel {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .mobileEditorialBlock {
+    gap: 32px;
+    padding: 80px 24px;
+  }
+
+  .mobileEditorialHeading {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .mobileGovernanceTrack {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobileGovernanceStep,
+  .mobileGovernanceStepLast {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mobileGovernanceContent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .mobileGovernanceCircle {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .mobileGovernanceNumber {
+    font-size: 11px;
+  }
+
+  .mobileGovernanceLabel {
+    color: rgb(26, 26, 26);
+    font-size: 9px;
+    text-transform: uppercase;
+  }
+
+  .mobileGovernanceConnector {
+    width: 1px;
+    height: 20px;
+    margin-left: 18px;
+    background-color: rgb(166, 130, 94);
+    opacity: 0.3;
+  }
+
+  .mobileQuoteSection {
+    padding: 0 24px 80px;
+  }
+
+  .mobileQuote {
+    width: 100%;
+    font-size: 32px;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  .mobileGallerySection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 24px 80px;
+    box-sizing: border-box;
+  }
+
+  .mobileGalleryPrimary {
+    width: 100%;
+    height: 280px;
+  }
+
+  .mobileNoteAnchor {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .mobileNote {
+    width: 190px;
+    padding: 10px;
+    transform: rotate(-1.5deg);
+  }
+
+  .mobileNoteHeading,
+  .mobileNoteBody {
+    font-size: 6px;
+    white-space: nowrap;
+  }
+
+  .mobileGallerySecondaryImage {
+    width: 100%;
+    height: 180px;
+  }
+}

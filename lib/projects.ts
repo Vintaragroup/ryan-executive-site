@@ -1,128 +1,122 @@
-/**
- * Project Index Data Source
- *
- * Stores all approved project metadata for the work portfolio.
- * Used by /work route and /work/[slug] dynamic routes.
- *
- * Schema per project:
- * - id: Unique identifier (used in URL slug)
- * - name: Project/client name
- * - year: Project year (4-digit)
- * - category: Project category/type
- * - metric: Key metric value (displayed in index)
- * - metricLabel: Metric description
- * - thumbnailUrl: Project thumbnail image (used in index grid)
- * - description: Short project description (2-3 sentences)
- *
- * Note: Individual case study pages (/work/[slug]) not implemented in this task.
- * Links in project index point to future case study routes.
- */
+export interface ProjectImageSet {
+  tablet?: string;
+  mobile?: string;
+}
 
 export interface Project {
   id: string;
   name: string;
-  year: number;
-  category: string;
-  metric: string;
-  metricLabel: string;
-  thumbnailUrl: string;
-  description: string;
+  discipline: string;
+  period: string;
+  images: ProjectImageSet;
+  desktopMetaOrder?: 'period-first' | 'name-first';
+  isPublishedCaseStudy?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    id: "fifa-world-cup",
-    name: "FIFA World Cup 2026",
-    year: 2026,
-    category: "Global Sports Event",
-    metric: "[Metric_Value_01]",
-    metricLabel: "[Metric_Label_01]",
-    thumbnailUrl: "/placeholder-project-fifa.jpg",
-    description: "[Project_Context_Description_01]",
+    id: 'fifa-world-cup',
+    name: 'FIFA World Cup',
+    discipline: 'GLOBAL SPORTING',
+    period: '2022–2026',
+    images: {
+      tablet: '/images/work/tablet/project-01.png',
+      mobile: '/images/work/mobile/project-01.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "golden-state-warriors",
-    name: "Golden State Warriors",
-    year: 2024,
-    category: "Sports Organization",
-    metric: "[Metric_Value_02]",
-    metricLabel: "[Metric_Label_02]",
-    thumbnailUrl: "/placeholder-project-warriors.jpg",
-    description: "[Project_Context_Description_02]",
+    id: 'universal-studios',
+    name: 'Universal Studios',
+    discipline: 'THEME PARK OPS',
+    period: '2008–2010',
+    images: {
+      tablet: '/images/work/tablet/project-02.png',
+      mobile: '/images/work/mobile/project-02.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "universal-studios",
-    name: "Universal Studios",
-    year: 2023,
-    category: "Entertainment",
-    metric: "[Metric_Value_03]",
-    metricLabel: "[Metric_Label_03]",
-    thumbnailUrl: "/placeholder-project-universal.jpg",
-    description: "[Project_Context_Description_03]",
+    id: 'golden-state-warriors',
+    name: 'Golden State Warriors',
+    discipline: 'NBA EXPERIENCE',
+    period: '2015–2018',
+    images: {
+      tablet: '/images/work/tablet/project-03.png',
+      mobile: '/images/work/mobile/project-03.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "special-olympics",
-    name: "Special Olympics",
-    year: 2022,
-    category: "Global Sports Event",
-    metric: "[Metric_Value_04]",
-    metricLabel: "[Metric_Label_04]",
-    thumbnailUrl: "/placeholder-project-special-olympics.jpg",
-    description: "[Project_Context_Description_04]",
+    id: 'special-olympics',
+    name: 'Special Olympics',
+    discipline: 'INCLUSIVE SPORT',
+    period: '2018–2022',
+    images: {
+      tablet: '/images/work/tablet/project-04.png',
+      mobile: '/images/work/mobile/project-04.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "amp-energy",
-    name: "AMP Energy",
-    year: 2021,
-    category: "Brand Activation",
-    metric: "[Metric_Value_05]",
-    metricLabel: "[Metric_Label_05]",
-    thumbnailUrl: "/placeholder-project-amp.jpg",
-    description: "[Project_Context_Description_05]",
+    id: 'nike',
+    name: 'Nike',
+    discipline: 'EXPERIENTIAL',
+    period: '2016–2019',
+    images: {
+      tablet: '/images/work/tablet/project-05.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "caa",
-    name: "CAA (Creative Artists Agency)",
-    year: 2020,
-    category: "Corporate",
-    metric: "[Metric_Value_06]",
-    metricLabel: "[Metric_Label_06]",
-    thumbnailUrl: "/placeholder-project-caa.jpg",
-    description: "[Project_Context_Description_06]",
+    id: 'amp',
+    name: 'AMP',
+    discipline: 'MARKET GROWTH',
+    period: '2010–2012',
+    images: {
+      tablet: '/images/work/tablet/project-06.png',
+    },
+    isPublishedCaseStudy: true,
   },
   {
-    id: "nike",
-    name: "Nike",
-    year: 2019,
-    category: "Brand Campaign",
-    metric: "[Metric_Value_07]",
-    metricLabel: "[Metric_Label_07]",
-    thumbnailUrl: "/placeholder-project-nike.jpg",
-    description: "[Project_Context_Description_07]",
+    id: 'datavault',
+    name: 'Datavault',
+    discipline: 'FINTECH INFRA',
+    period: '2021–2022',
+    images: {
+      tablet: '/images/work/tablet/project-07.png',
+    },
+    isPublishedCaseStudy: false,
   },
   {
-    id: "additional-project",
-    name: "[Additional_Project_Name]",
-    year: 2024,
-    category: "[Project_Category]",
-    metric: "[Metric_Value_08]",
-    metricLabel: "[Metric_Label_08]",
-    thumbnailUrl: "/placeholder-project-additional.jpg",
-    description: "[Project_Context_Description_08]",
+    id: 'vintara',
+    name: 'Vintara',
+    discipline: 'HOSPITALITY',
+    period: '2023–2025',
+    images: {
+      tablet: '/images/work/tablet/project-08.png',
+    },
+    isPublishedCaseStudy: true,
+  },
+  {
+    id: 'ion-creative-studios',
+    name: 'iON Creative Studios',
+    discipline: 'CREATIVE OPS',
+    period: '2015–2018',
+    images: {},
+    desktopMetaOrder: 'name-first',
+    isPublishedCaseStudy: false,
   },
 ];
 
-/**
- * Get project by ID (slug)
- * Used by dynamic case study routes: /work/[slug]
- */
+export const publishedCaseStudyProjects = projects.filter(
+  (project) => project.isPublishedCaseStudy !== false,
+);
+
 export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.id === slug);
+  return projects.find((project) => project.id === slug);
 }
 
-/**
- * Get all projects for index
- */
 export function getAllProjects(): Project[] {
   return projects;
 }

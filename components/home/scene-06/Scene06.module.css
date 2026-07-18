@@ -1,0 +1,147 @@
+.scene {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 80px;
+  padding: 120px 80px;
+  box-sizing: border-box;
+  background-color: rgb(10, 10, 11);
+  color: rgb(245, 245, 245);
+}
+
+.label,
+.moduleTitle,
+.moduleTag {
+  margin: 0;
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.label {
+  color: rgb(166, 130, 94);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.stack {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.module {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.moduleHeader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.moduleTitle {
+  color: rgb(166, 130, 94);
+  font-size: 14px;
+}
+
+.moduleTag {
+  color: rgb(166, 130, 94);
+  font-size: 10px;
+  opacity: 0.4;
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(166, 130, 94);
+  opacity: 0.2;
+}
+
+.copyDesktop,
+.copyMobile {
+  margin: 0;
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.12;
+  color: rgb(245, 245, 245);
+}
+
+.copyMobile {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .scene {
+    gap: 64px;
+    padding: 100px 48px;
+  }
+
+  .stack {
+    gap: 36px;
+  }
+
+  .module {
+    gap: 16px;
+  }
+
+  .moduleTitle {
+    font-size: 13px;
+  }
+
+  .moduleTag {
+    font-size: 9px;
+  }
+
+  .copyDesktop {
+    font-size: 26px;
+    line-height: 1.18;
+  }
+}
+
+@media (max-width: 479px) {
+  .scene {
+    gap: 56px;
+    padding: 80px 24px;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .stack {
+    gap: 40px;
+  }
+
+  .moduleHeader {
+    gap: 12px;
+  }
+
+  .moduleTitle {
+    font-size: 11px;
+  }
+
+  .moduleTag {
+    font-size: 8px;
+  }
+
+  .copyDesktop {
+    display: none;
+  }
+
+  .copyMobile {
+    display: block;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,243 @@
+.scene {
+  position: relative;
+  width: 100%;
+  min-height: 988px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 88px;
+  padding: 240px 80px;
+  box-sizing: border-box;
+  background-color: rgb(249, 247, 242);
+  color: rgb(26, 26, 26);
+  font-style: normal;
+  word-break: break-word;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+  opacity: 0.95;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.brand {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  color: rgb(26, 26, 26);
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.navLinks {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 40px;
+  color: rgb(26, 26, 26);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.navLink {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  letter-spacing: 1.5px;
+  opacity: 0.6;
+}
+
+.mobileMenuIcon {
+  display: none;
+}
+
+.statementDesktop {
+  position: relative;
+  flex-shrink: 0;
+  width: 1061px;
+  max-width: 1061px;
+  margin: 0;
+  color: rgb(26, 26, 26);
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-size: 110px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.95;
+  letter-spacing: -5px;
+}
+
+.statementResponsive {
+  display: none;
+}
+
+.statementLine {
+  margin: 0;
+  line-height: 0.95;
+}
+
+.metadata {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 1061px;
+  margin: 0;
+  color: rgb(26, 26, 26);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  opacity: 0.28;
+}
+
+.responsiveOnly {
+  display: none;
+}
+
+.highlight {
+  color: rgb(166, 130, 94);
+}
+
+@media (max-width: 1023px) {
+  .scene {
+    min-height: 632px;
+    gap: 56px;
+    padding: 160px 48px;
+  }
+
+  .nav {
+    padding: 0 48px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .navLinks {
+    gap: 24px;
+    font-size: 10px;
+  }
+
+  .navLink {
+    letter-spacing: 1px;
+  }
+
+  .statementDesktop {
+    display: none;
+  }
+
+  .statementResponsive {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 0;
+    color: rgb(26, 26, 26);
+    font-family: var(--font-serif), 'Instrument Serif', serif;
+    font-size: 64px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0;
+    letter-spacing: -2px;
+  }
+
+  .statementLine {
+    margin: 0;
+    line-height: 0.95;
+  }
+
+  .metadata {
+    width: 100%;
+    line-height: normal;
+    letter-spacing: 1px;
+    opacity: 0.4;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .responsiveOnly {
+    display: inline;
+  }
+}
+
+@media (max-width: 479px) {
+  .scene {
+    min-height: 452px;
+    gap: 48px;
+    padding: 120px 24px;
+  }
+
+  .nav {
+    width: 390px;
+    padding: 0 24px;
+    opacity: 1;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobileMenuLine {
+    position: relative;
+    flex-shrink: 0;
+    width: 18px;
+    height: 1.5px;
+    background-color: rgb(26, 26, 26);
+  }
+
+  .statementResponsive {
+    width: 100%;
+    height: 136px;
+    font-size: 32px;
+    line-height: 0;
+    letter-spacing: -1px;
+  }
+
+  .statementLine {
+    line-height: 1.05;
+  }
+
+  .metadata {
+    width: 100%;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    opacity: 0.4;
+  }
+
+}

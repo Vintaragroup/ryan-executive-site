@@ -1,0 +1,169 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  padding: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: rgb(10, 10, 11);
+  color: rgb(245, 245, 245);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-color: rgba(10, 10, 11, 0.45);
+}
+
+.metadata {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  z-index: 2;
+  margin: 0;
+  color: rgb(245, 245, 245);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  opacity: 0.28;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.titleBlock {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 8px;
+  color: rgb(245, 245, 245);
+  font-style: normal;
+  line-height: normal;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.name {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  color: rgb(245, 245, 245);
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.role {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+  color: rgb(245, 245, 245);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.responsiveOnly {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .scene {
+    height: 800px;
+    padding: 80px 48px 64px;
+  }
+
+  .metadata {
+    top: 60px;
+    right: 40px;
+    left: 48px;
+    font-size: 8.5px;
+    opacity: 0.35;
+  }
+
+  .titleBlock {
+    width: 100%;
+    gap: 12px;
+    white-space: normal;
+  }
+
+  .name {
+    width: 100%;
+    font-size: 44px;
+    line-height: normal;
+  }
+
+  .role {
+    width: 100%;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .responsiveOnly {
+    display: inline;
+  }
+}
+
+@media (max-width: 479px) {
+  .scene {
+    height: 720px;
+    padding: 60px 24px 48px;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .overlay {
+    background-color: rgba(15, 15, 16, 0.5);
+  }
+
+  .metadata {
+    top: 60px;
+    right: auto;
+    left: 24px;
+    font-size: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.35;
+  }
+
+  .titleBlock {
+    gap: 16px;
+  }
+
+  .name {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .role {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+}
