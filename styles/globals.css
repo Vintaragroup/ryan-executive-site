@@ -2,3 +2,8 @@
 @import './theme.css';
 @import './typography.css';
 @import 'tailwindcss';
+
+html,
+body {
+  margin: 0;
+}

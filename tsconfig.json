@@ -28,8 +28,8 @@
     "isolatedModules": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": [
         "./*"
@@ -73,9 +73,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next-build/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "design/source"
   ]
 }

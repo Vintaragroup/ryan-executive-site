@@ -1,35 +1,13 @@
-'use client';
-
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Footer, GlobalNav } from '@/components/navigation';
 import { getCaseStudyBySlug } from '@/lib/case-studies';
-import {
-  PageContainer,
-  PageContainerInset,
-  SectionContainer,
-  GlobalNav,
-  Footer,
-  DisplayHero,
-  DisplayTitle,
-  HeadingH1,
-  HeadingH2,
-  Body,
-  Meta,
-  MetricCard,
-  EditorialSilenceScene,
-} from '@/components';
 
 interface CaseStudyClientProps {
   slug: string;
 }
 
-/**
- * Case Study Client Component
- *
- * Renders the interactive case study page content.
- * Kept separate from page.tsx to allow static generation at the parent level.
- */
 export function CaseStudyClient({ slug }: CaseStudyClientProps) {
   const caseStudy = getCaseStudyBySlug(slug);
 
@@ -37,46 +15,42 @@ export function CaseStudyClient({ slug }: CaseStudyClientProps) {
     notFound();
   }
 
-  const navLinks = [
-    { label: 'Work', href: '/work' },
-    { label: 'System', href: '/system' },
-    { label: 'Journey', href: '/journey' },
-    { label: 'Contact', href: '/contact' },
-  ];
-
   const footerLinks = [
-    { label: 'Instagram', href: '#' },
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Email', href: 'mailto:hello@ryanmorrow.com' },
+    { label: 'Work', href: '/work' },
+    { label: 'LinkedIn', href: 'https://linkedin.com/in/ryanmorrow' },
+    { label: 'Email', href: 'mailto:office@ryanmorrow.com' },
   ];
 
   return (
-    <PageContainer>
-      {/* Navigation */}
-      <GlobalNav links={navLinks} />
+    <main className="bg-paper text-charcoal">
+      <GlobalNav />
 
-      {/* SECTION 1: OPENING SPREAD */}
-      <section>
-        <SectionContainer>
-          <div className="pt-20 pb-12 md:pt-24 md:pb-16">
-            <div className="space-y-6">
-              <Meta className="text-copper">{caseStudy.opening.subtitle}</Meta>
-              <DisplayHero className="text-near-black">
-                {caseStudy.opening.title}
-              </DisplayHero>
-              <Body className="text-gray-secondary max-w-2xl">
-                {caseStudy.opening.heroDescription}
-              </Body>
-            </div>
-          </div>
-        </SectionContainer>
+      <section className="border-b border-light-gray px-6 py-5 sm:px-10 lg:px-20">
+        <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[2px] text-[#6b6b6b] sm:text-[11px]">
+          <Link href="/work" className="text-copper underline-offset-4 hover:underline">
+            Back to Work
+          </Link>
+          <span className="opacity-40">/</span>
+          <span>{caseStudy.name}</span>
+        </div>
       </section>
 
-      {/* SECTION 2: HERO IMAGE */}
-      <section className="relative h-96 md:h-screen lg:h-screen overflow-hidden bg-light-gray">
+      <section className="bg-near-black px-6 py-24 text-center text-warm-white sm:px-10 sm:py-32 lg:flex lg:h-200 lg:flex-col lg:items-center lg:justify-center lg:px-20 lg:py-0">
+        <p className="text-copper font-mono text-[10px] uppercase tracking-[3px] sm:text-[11px]">
+          {caseStudy.opening.subtitle}
+        </p>
+        <h1 className="mt-6 font-serif text-[44px] leading-[0.95] tracking-[-0.8px] sm:text-[56px] lg:text-[72px] lg:tracking-[-1.5px]">
+          {caseStudy.opening.title}
+        </h1>
+        <p className="mx-auto mt-6 max-w-190 font-sans text-[16px] leading-[1.7] text-[#6b6b6b] sm:text-[18px] lg:text-[20px] lg:font-light">
+          {caseStudy.opening.heroDescription}
+        </p>
+      </section>
+
+      <section className="relative h-105 sm:h-140 lg:h-200">
         <Image
           src={caseStudy.opening.heroImageUrl}
-          alt={caseStudy.opening.title}
+          alt={`${caseStudy.name} hero image`}
           fill
           priority
           className="object-cover"
@@ -84,168 +58,130 @@ export function CaseStudyClient({ slug }: CaseStudyClientProps) {
         />
       </section>
 
-      {/* SECTION 3: CONTEXT (THE BRIEF) */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-20 md:py-24 space-y-8">
-              <div>
-                <Meta className="text-copper block mb-4">THE BRIEF</Meta>
-                <HeadingH1 className="text-near-black mb-8">
-                  {caseStudy.context.heading}
-                </HeadingH1>
-              </div>
-
-              <div className="space-y-6 max-w-3xl">
-                {caseStudy.context.paragraphs.map((paragraph, idx) => (
-                  <Body key={idx} className="text-near-black">
-                    {paragraph}
-                  </Body>
-                ))}
-              </div>
-            </div>
-          </SectionContainer>
-        </PageContainerInset>
+      <section className="px-6 py-16 sm:px-10 sm:py-20 lg:px-80 lg:py-24">
+        <p className="text-copper font-mono text-[10px] uppercase tracking-[3px] sm:text-[11px]">
+          THE BRIEF
+        </p>
+        <h2 className="mt-6 font-serif text-[32px] leading-[1.1] tracking-[-0.4px] sm:text-[36px] lg:text-[40px] lg:tracking-[-0.5px]">
+          {caseStudy.context.heading}
+        </h2>
+        <div className="mt-8 space-y-6 font-sans text-[16px] leading-[1.7] text-[#4a4a4a] sm:text-[17px]">
+          {caseStudy.context.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </section>
 
-      {/* SECTION 4: METRICS (4-UP GRID) */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-12 md:py-16">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
-                {caseStudy.metrics.map((metric, idx) => (
-                  <MetricCard key={idx} value={metric.value} label={metric.label} />
-                ))}
-              </div>
+      <section className="bg-near-black px-6 py-14 sm:px-10 lg:flex lg:h-62.5 lg:items-center lg:justify-between lg:px-30 lg:py-16">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:flex lg:w-full lg:justify-between">
+          {caseStudy.metrics.map((metric) => (
+            <div key={metric.label} className="text-center lg:min-w-45">
+              <p className="text-copper font-serif text-[40px] tracking-[-1px] sm:text-[44px] lg:text-[48px]">
+                {metric.value}
+              </p>
+              <p className="mt-2 font-mono text-[9px] uppercase tracking-[2px] text-[#6b6b6b] sm:text-[10px]">
+                {metric.label}
+              </p>
             </div>
-          </SectionContainer>
-        </PageContainerInset>
+          ))}
+        </div>
       </section>
 
-      {/* SECTION 5: SILENCE (EDITORIAL SPACE) */}
-      <EditorialSilenceScene className="min-h-[60vh] md:min-h-[40vh]" />
+      <section className="h-55 bg-near-black sm:h-70 lg:h-100" />
 
-      {/* SECTION 6: CHALLENGE (THE CHALLENGE) */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-20 md:py-24 space-y-8">
-              <div>
-                <Meta className="text-copper block mb-4">THE CHALLENGE</Meta>
-                <HeadingH1 className="text-near-black mb-8">
-                  {caseStudy.challenge.heading}
-                </HeadingH1>
-              </div>
-
-              <div className="space-y-6 max-w-3xl">
-                {caseStudy.challenge.paragraphs.map((paragraph, idx) => (
-                  <Body key={idx} className="text-near-black">
-                    {paragraph}
-                  </Body>
-                ))}
-              </div>
-            </div>
-          </SectionContainer>
-        </PageContainerInset>
+      <section className="px-6 py-16 sm:px-10 sm:py-20 lg:px-80 lg:py-24">
+        <p className="text-copper font-mono text-[10px] uppercase tracking-[3px] sm:text-[11px]">
+          THE CHALLENGE
+        </p>
+        <h2 className="mt-6 font-serif text-[32px] leading-[1.1] tracking-[-0.4px] sm:text-[36px] lg:text-[40px] lg:tracking-[-0.5px]">
+          {caseStudy.challenge.heading}
+        </h2>
+        <p className="mt-8 font-sans text-[16px] leading-[1.7] text-[#4a4a4a] sm:text-[17px]">
+          {caseStudy.challenge.body}
+        </p>
       </section>
 
-      {/* SECTION 7: SYSTEM (THE OPERATIONAL SYSTEM) */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-20 md:py-24 space-y-8">
-              <div>
-                <Meta className="text-copper block mb-4">THE OPERATIONAL SYSTEM</Meta>
-                <HeadingH1 className="text-near-black mb-8">
-                  {caseStudy.system.heading}
-                </HeadingH1>
-              </div>
-
-              <div className="space-y-6 max-w-3xl">
-                {caseStudy.system.paragraphs.map((paragraph, idx) => (
-                  <Body key={idx} className="text-near-black">
-                    {paragraph}
-                  </Body>
-                ))}
-              </div>
-            </div>
-          </SectionContainer>
-        </PageContainerInset>
+      <section className="bg-near-black px-6 py-16 text-warm-white sm:px-10 sm:py-20 lg:px-30 lg:py-24">
+        <p className="text-copper font-mono text-[10px] uppercase tracking-[3px] sm:text-[11px]">
+          THE OPERATIONAL SYSTEM
+        </p>
+        <h2 className="mt-6 font-serif text-[32px] leading-[1.1] tracking-[-0.4px] sm:text-[36px] lg:text-[40px] lg:tracking-[-0.5px]">
+          {caseStudy.system.heading}
+        </h2>
+        <p className="mt-8 max-w-max font-sans text-[16px] leading-[1.7] text-[#6b6b6b] sm:text-[17px] lg:font-light">
+          {caseStudy.system.body}
+        </p>
       </section>
 
-      {/* SECTION 8: EVIDENCE GALLERY */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-20 md:py-24 space-y-12">
-              <Meta className="text-copper block">EVIDENCE</Meta>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                {caseStudy.gallery.images.map((image, idx) => (
-                  <figure key={idx} className="space-y-4">
-                    <div className="relative aspect-square overflow-hidden bg-light-gray rounded">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
-                    {image.caption && (
-                      <figcaption>
-                        <Meta className="text-gray-secondary">{image.caption}</Meta>
-                      </figcaption>
-                    )}
-                  </figure>
-                ))}
-              </div>
+      <section className="px-6 py-16 sm:px-10 sm:py-20 lg:px-20 lg:py-24">
+        <p className="text-copper font-mono text-[10px] uppercase tracking-[3px] sm:text-[11px]">
+          EVIDENCE
+        </p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+          {caseStudy.evidence.map((image) => (
+            <div
+              key={image.src}
+              className="relative h-80 overflow-hidden bg-dark-gray sm:h-105 lg:h-125"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 33vw"
+              />
             </div>
-          </SectionContainer>
-        </PageContainerInset>
+          ))}
+        </div>
       </section>
 
-      {/* SECTION 9: REFLECTION (CLOSING QUOTE) */}
-      <section>
-        <PageContainerInset>
-          <SectionContainer>
-            <div className="py-20 md:py-24 max-w-3xl">
-              <div className="space-y-6">
-                <DisplayTitle className="text-near-black">
-                  {`"${caseStudy.reflection.quote}"`}
-                </DisplayTitle>
-                {caseStudy.reflection.attribution && (
-                  <Body className="text-gray-secondary">
-                    {`\u2014 ${caseStudy.reflection.attribution}`}
-                  </Body>
-                )}
-              </div>
-            </div>
-          </SectionContainer>
-        </PageContainerInset>
+      <section className="bg-near-black px-6 py-20 text-center text-warm-white sm:px-10 lg:px-20 lg:py-24">
+        <p className="text-copper font-serif text-[56px] leading-none lg:text-[72px]">&quot;</p>
+        <p className="mx-auto mt-4 max-w-225 font-serif text-[24px] italic leading-normal sm:text-[26px] lg:text-[28px]">
+          {caseStudy.reflection.quote}
+        </p>
+        <p className="text-copper mt-8 font-mono text-[10px] uppercase tracking-[2px] sm:text-[11px]">
+          {caseStudy.reflection.coda}
+        </p>
       </section>
 
-      {/* SECTION 10: NEXT PROJECT NAVIGATION */}
-      {caseStudy.nextProject && (
-        <section>
-          <PageContainerInset>
-            <SectionContainer>
-              <div className="py-20 md:py-24 space-y-12 border-t border-light-gray pt-12">
-                <Meta className="text-copper">NEXT PROJECT</Meta>
-                <Link href={`/work/${caseStudy.nextProject.id}`} className="group block">
-                  <HeadingH2 className="text-near-black group-hover:text-copper transition-colors">
-                    {caseStudy.nextProject.name} →
-                  </HeadingH2>
-                </Link>
-              </div>
-            </SectionContainer>
-          </PageContainerInset>
-        </section>
-      )}
+      <section className="border-t border-light-gray px-6 py-16 sm:px-10 lg:px-20 lg:py-20">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="space-y-4">
+            <p className="font-mono text-[10px] uppercase tracking-[2px] text-[#6b6b6b]">Back to Work</p>
+            <Link
+              href="/work"
+              className="inline-block font-serif text-[28px] tracking-[-0.3px] text-charcoal underline-offset-4 hover:underline sm:text-[30px] lg:text-[32px]"
+            >
+              ← All Case Studies
+            </Link>
+          </div>
 
-      {/* SECTION 11: FOOTER */}
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="space-y-4">
+              <p className="font-mono text-[10px] uppercase tracking-[2px] text-[#6b6b6b]">Previous Project</p>
+              <Link
+                href={`/work/${caseStudy.previousProject.id}`}
+                className="inline-block font-serif text-[28px] tracking-[-0.3px] text-charcoal underline-offset-4 hover:underline sm:text-[30px] lg:text-[32px]"
+              >
+                ← {caseStudy.previousProject.name}
+              </Link>
+            </div>
+
+            <div className="space-y-4 lg:text-right">
+              <p className="font-mono text-[10px] uppercase tracking-[2px] text-[#6b6b6b]">Next Project</p>
+              <Link
+                href={`/work/${caseStudy.nextProject.id}`}
+                className="inline-block font-serif text-[28px] tracking-[-0.3px] text-charcoal underline-offset-4 hover:underline sm:text-[30px] lg:text-[32px]"
+              >
+                {caseStudy.nextProject.name} →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer links={footerLinks} />
-    </PageContainer>
+    </main>
   );
 }

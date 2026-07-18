@@ -1,11 +1,26 @@
 import { ReactNode } from 'react';
-import { Inter, IBM_Plex_Mono } from 'next/font/google';
+import { Geist, IBM_Plex_Mono, Instrument_Serif, Inter } from 'next/font/google';
 import '@/styles/globals.css';
+
+// Load Instrument Serif for editorial display typography
+const instrumentSerif = Instrument_Serif({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+});
 
 // Load Inter for body and UI typography
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+// Load Geist for Figma-authored body and interface typography
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist',
   display: 'swap',
 });
 
@@ -17,12 +32,6 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: 'swap',
 });
 
-// Instrument Serif will fall back to Georgia until font files are added
-// To enable Instrument Serif:
-// 1. Add font files to public/fonts/
-// 2. Uncomment the localFont import and configuration below
-// 3. Add instrumentSerif.variable to the body className
-
 export const metadata = {
   title: 'Ryan Morrow - Executive Site',
   description: 'Professional executive monograph and portfolio',
@@ -31,7 +40,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${ibmPlexMono.variable}`}>
+      <body
+        className={`${instrumentSerif.variable} ${inter.variable} ${geist.variable} ${ibmPlexMono.variable}`}
+      >
         {children}
       </body>
     </html>

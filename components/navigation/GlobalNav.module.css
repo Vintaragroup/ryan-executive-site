@@ -1,0 +1,247 @@
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.skipLink {
+  position: absolute;
+  left: 24px;
+  top: 16px;
+  z-index: 2;
+  padding: 8px 12px;
+  background: rgb(249, 247, 242);
+  color: rgb(26, 26, 26);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-200%);
+}
+
+.skipLink:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid rgb(166, 130, 94);
+  outline-offset: 2px;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+  background: rgba(249, 247, 242, 0.95);
+}
+
+.brand {
+  margin: 0;
+  color: rgb(26, 26, 26);
+  font-family: var(--font-serif), 'Instrument Serif', serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand:focus-visible,
+.link:focus-visible,
+.menuButton:focus-visible,
+.overlayLink:focus-visible,
+.overlayClose:focus-visible {
+  outline: 2px solid rgb(166, 130, 94);
+  outline-offset: 4px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.link {
+  position: relative;
+  padding: 6px 0;
+  color: rgba(26, 26, 26, 0.6);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 200ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: rgb(166, 130, 94);
+}
+
+.linkCurrent {
+  color: rgb(26, 26, 26);
+}
+
+.linkCurrent::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -11px;
+  left: 0;
+  height: 1px;
+  background: rgb(166, 130, 94);
+}
+
+.menuButton {
+  display: none;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(26, 26, 26);
+  cursor: pointer;
+}
+
+.menuLine {
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 51;
+  background: rgba(249, 247, 242, 0.98);
+}
+
+.overlayBackdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.overlayContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.overlayHeader {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+.overlayClose {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgb(26, 26, 26);
+  cursor: pointer;
+}
+
+.overlayPanel {
+  padding: 24px;
+  pointer-events: auto;
+}
+
+.overlayLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overlayLink {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 10px;
+  color: rgba(26, 26, 26, 0.6);
+  font-family: var(--font-mono), 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 200ms ease;
+}
+
+.overlayLink:hover,
+.overlayLink:focus-visible {
+  color: rgb(166, 130, 94);
+}
+
+.overlayLinkCurrent {
+  color: rgb(26, 26, 26);
+}
+
+.overlayLinkCurrent::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: rgb(166, 130, 94);
+}
+
+@media (max-width: 1023px) {
+  .bar {
+    padding: 0 48px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .links {
+    gap: 24px;
+  }
+
+  .link {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 479px) {
+  .bar {
+    padding: 0 24px;
+    background: rgba(249, 247, 242, 1);
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}

@@ -30,6 +30,11 @@ interface PageContainerProps {
    * Optional ARIA role (default: 'main')
    */
   role?: string;
+
+  /**
+   * Optional element id
+   */
+  id?: string;
 }
 
 /**
@@ -65,6 +70,7 @@ export function PageContainer({
   className,
   style,
   role = 'main',
+  id,
 }: PageContainerProps) {
   const bgColor = variant === 'dark' ? 'var(--color-near-black, #0f0f10)' : 'var(--color-paper, #faf8f5)';
 
@@ -81,6 +87,7 @@ export function PageContainer({
       style={containerStyle}
       data-node-id="164:2"
       data-name="Template_Case_Study_Page"
+      id={id ?? (role === 'main' ? 'main-content' : undefined)}
       role={role}
     >
       {children}

@@ -96,11 +96,13 @@ export function Footer({ copyrightText, links, className, onLinkClick }: FooterP
           <a
             key={`${link.href}-${index}`}
             href={link.href}
-            onClick={(e) => {
-              e.preventDefault();
-              onLinkClick?.(link.href);
-              // In a real app, you might use router.push() here
-            }}
+            onClick={
+              onLinkClick
+                ? () => {
+                    onLinkClick(link.href);
+                  }
+                : undefined
+            }
             className="text-copper font-mono text-xs tracking-wide transition-colors duration-200 hover:text-copper-light"
             style={{
               fontSize: '10px',
