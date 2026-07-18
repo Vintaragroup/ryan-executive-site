@@ -144,12 +144,14 @@ All layout primitives are reusable components:
 **Total: 0 new components created** ✅
 
 ### Navigation Props
-- **GlobalNav**: Requires `links` array with 4 navigation items
+- **GlobalNav**: Requires `links` array with 6 navigation items
   ```typescript
   links: [
-    { label: 'Chapter', href: '/work' },
-    { label: 'Systems', href: '/system' },
+      { label: 'Work', href: '/work' },
+      { label: 'System', href: '/system' },
     { label: 'Journey', href: '/journey' },
+      { label: 'Field Notes', href: '/field-notes' },
+      { label: 'Thinking', href: '/thinking' },
     { label: 'Contact', href: '/contact' },
   ]
   ```

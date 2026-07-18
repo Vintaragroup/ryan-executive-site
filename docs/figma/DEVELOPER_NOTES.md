@@ -348,7 +348,7 @@ npm run lint     # ESLint checks
 
 **Navigation/Global_Nav**
 - **Desktop:** Horizontal links in header
-- **Tablet:** Hamburger menu icon
+- **Tablet:** Horizontal links in header
 - **Mobile:** Hamburger menu with full-screen overlay
 - **Behavior:** Persistent fixed position across all pages, z-50
 - **Implementation:** Next.js `<Link>` with `usePathname()` for active state, Framer Motion for mobile menu overlay
